@@ -19,6 +19,9 @@ function main() {
     if ((clicks > 0 && cost >= 5) || (CpC >= 30)) {
        kw.setMaxCpc(newbid);
     }
+    if (conversions == 0 && cost >= 1 && avg_posi < 2) {
+      kw.setMaxCpc(newbid);
+    }
   }
 }
 Logger.log("Shit be done son")
