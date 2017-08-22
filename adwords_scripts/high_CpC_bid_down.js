@@ -1,5 +1,6 @@
 function main() {
 
+Logger.log("Sequence initiated, should be done in about 10 minutes or so...")
   var kw_iter = AdWordsApp.keywords()
   .withCondition("Status = ENABLED")
   .get();
@@ -11,6 +12,8 @@ function main() {
     var bid = kw.getMaxCpc();
     var tocut = bid * .20; //should produce cents to bid down
     var newbid = bid - tocut;
+    var topush = bid * .20;
+    var pushbid = bid + topush;
     var conversions = kw_stats.getConversions();
     var avg_posi = kw_stats.getAveragePosition();
     var clicks = kw_stats.getClicks();
@@ -22,6 +25,9 @@ function main() {
     if (conversions == 0 && cost >= 1 && avg_posi < 2) {
       kw.setMaxCpc(newbid);
     }
+    if (conversions == 2 && avg_posi > 2 && CpC <= 20) {
+      kw.setMaxCpC(pushbid);
+    }
   }
 }
-Logger.log("Shit be done son")
+Logger.log("Alles gut in da hood")
