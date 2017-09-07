@@ -11,7 +11,7 @@ Logger.log("Sequence initiated, should be done in about 10 minutes or so...")
     var cost = kw_stats.getCost();
     var bid = kw.getMaxCpc();
     var tocut = bid * .20; //should produce cents to bid down
-    var newbid = bid - tocut;
+    var pullbid = bid - tocut;
     var topush = bid * .20;
     var pushbid = bid + topush;
     var conversions = kw_stats.getConversions();
@@ -20,10 +20,10 @@ Logger.log("Sequence initiated, should be done in about 10 minutes or so...")
     var CpC = cost / conversions;
 
     if ((clicks > 0 && cost >= 5) || (CpC >= 30)) {
-       kw.setMaxCpc(newbid);
+       kw.setMaxCpc(pullbid);
     }
     if (conversions == 0 && cost >= 1 && avg_posi < 2) {
-      kw.setMaxCpc(newbid);
+      kw.setMaxCpc(pullbid);
     }
     if (conversions == 2 && avg_posi > 2 && CpC <= 20) {
       kw.setMaxCpC(pushbid);

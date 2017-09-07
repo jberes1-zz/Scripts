@@ -78,8 +78,8 @@ if __name__ == '__main__':
         bid_info={AdSet.Field.BidInfo.impressions: 53},  # $0.53 / thousand
         daily_budget=1000,  # $10.00 per day
 
-        age_min=13,
-        age_max=65,
+        age_min=20,
+        age_max=30,
 
         paused=True,  # Default is False but let's keep this test ad paused
     )

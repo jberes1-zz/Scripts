@@ -1,4 +1,4 @@
-from facebookads.api import FacebookAdsApi
+from facebookads.api import FacebookMarketingApi
 from facebookads import objects
 
 my_app_id = '1940705959532182'
@@ -9,7 +9,7 @@ FacebookAdsApi.init(my_app_id, my_app_secret, my_access_token)
 
 from facebookads.adobjects.campaign import Campaign
 
-campaign = Campaign(parent_id='act_<AD_ACCOUNT_ID>')
+campaign = Campaign(parent_id='act_2052697514756594')
 campaign.update({
     Campaign.Field.name: 'My First Campaign',
     Campaign.Field.objective: 'CONVERSIONS',
