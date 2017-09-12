@@ -58,7 +58,7 @@ var APPLY_TEST_START_DATE_LABELS = true;
 
 //These come from the url when you are logged into AdWords
 //Set these if you want your emails to link directly to the AdGroup
-var __c = '6580831071';
+var __c = '1616449092';
 var __u = '6299983537';
 
 function main() {

@@ -19,7 +19,7 @@ Logger.log("Sequence initiated, should be done in about 10 minutes or so...")
     var clicks = kw_stats.getClicks();
     var CpC = cost / conversions;
 
-    if ((clicks > 0 && cost >= 5) || (CpC >= 30)) {
+    if ((clicks > 0 && cost >= 5) || (CpC >= 25)) {
        kw.setMaxCpc(pullbid);
     }
     if (conversions == 0 && cost >= 1 && avg_posi < 2) {
