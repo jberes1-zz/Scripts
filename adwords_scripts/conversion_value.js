@@ -39,7 +39,7 @@ var Click_Threshold = 1;
 	  var Conversions = KWRow["Conversions"];
 	  var cost = KWRow["Cost"];
 
-//Convert KPIs into Floats
+//Convert KPIs into Floats to enable calculations
 	  var a = parseFloat(bid);
 	  var b = parseFloat(Rev);
 	  var c = parseFloat(CpC);
