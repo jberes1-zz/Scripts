@@ -1,6 +1,6 @@
 var SIG_FIGS = 10000;
 var APPEND = true;
-//Automatic Bidding for US Geo Locations
+//Reporting for Adwords performance based on geo location. Need to export it to an Excel file and do a Vlookup with the geo location table provided by Google
 
 function main () {
 
